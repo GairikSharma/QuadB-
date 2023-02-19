@@ -1,0 +1,167 @@
+.container {
+  width: 100vw;
+  min-height: 100vh;
+  /* display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+  background: linear-gradient(to bottom, #192133, #111826);
+}
+
+.card {
+  width: 20%;
+  height: 400px;
+  /* height: auto; */
+  /* background-color: rgba(170, 173, 175, 0.249); */
+  background: transparent;
+  border-radius: 12px;
+  /* box-shadow: -2px 7px 147px -51px rgba(201,235,255,0.95); */
+  /* padding-left: 10px; */
+  /* position: relative; */
+  border: 0.5px solid #192133;
+  margin: 7.5px;
+
+  box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
+    0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
+    0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
+    0 100px 80px rgba(0, 0, 0, 0.12);
+  transition: 0.5s;
+  position: relative;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: flex-start;
+}
+
+.card:hover {
+  background-color: white;
+  color: black !important;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: 70%;
+  border-top-right-radius: 12px;
+  border-top-left-radius: 12px;
+  overflow: hidden;
+  padding: 5px;
+}
+
+.image-wrapper img {
+  width: 100%;
+  height: 100%;
+  transition: 0.5s;
+}
+
+.card:hover img {
+  transform: scale(1.1);
+}
+
+.movie-name {
+  margin-left: 15px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 16px;
+  /* color: white; */
+  opacity: 0.8;
+  margin-top: 4.5px;
+}
+
+.movie-name span {
+  margin-left: 15px;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 16px;
+  /* color: white; */
+  opacity: 0.5;
+  margin-top: 4.5px;
+}
+
+.genre {
+  margin-left: 15px;
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 19px;
+  /* color: white; */
+  opacity: 0.6;
+  margin-top: 7.5px;
+}
+
+.rating {
+  margin-left: 15px;
+  color: orange;
+  margin-top: 4.5px;
+}
+
+.genre {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  height: auto;
+  gap: 7.5px;
+}
+
+.summary {
+  color: white;
+  opacity: 0.8;
+}
+
+.about {
+  margin-left: 4.5%;
+  width: auto;
+  height: auto;
+  padding: 10px;
+  background: transparent;
+  /* color: white; */
+  color: #111826;
+  background: #d3d3d3;
+  position: absolute;
+  bottom: 5px;
+  border-radius: 7.5px;
+  border: transparent;
+}
+
+.about:hover {
+  background-color: #192133;
+  color: white;
+}
+
+.card:hover .about {
+  color: #111826;
+  background: #d3d3d3;
+}
+
+.card:hover .about:hover {
+  background-color: #192133;
+  color: white;
+}
+
+@media only screen and (max-width: 1024px) {
+  .card {
+    width: 33.33%;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .card {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .card {
+    width: 75%;
+  }
+}
+
+@media only screen and (max-width: 400px) {
+  .card {
+    width: 100%;
+  }
+}
